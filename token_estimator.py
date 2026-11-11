@@ -37,6 +37,7 @@ SUPPORTED_EXTENSIONS = {
 }
 
 DEFAULT_CONTEXT_LIMIT = 100_000
+MAX_REFERENCE_FILES = 16
 
 
 @dataclass
@@ -876,6 +877,13 @@ def main() -> None:
             for path in args.paths
         )
     )
+
+    if len(files) > MAX_REFERENCE_FILES:
+        print(
+            f"WARNING: Son Spectacles allows at most "
+            f"{MAX_REFERENCE_FILES} reference files; "
+            f"{len(files)} were found."
+        )
 
     for file_path in files:
         estimates.append(
