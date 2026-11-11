@@ -33,7 +33,6 @@ SUPPORTED_EXTENSIONS = {
     ".py",
     ".md",
     ".html",
-    ".htm",
     ".xml",
 }
 
@@ -538,7 +537,7 @@ def extract_text(
                 f"Text extraction failed: {exc}",
             )
 
-    if extension in {".html", ".htm"}:
+    if extension == ".html":
         try:
             text = extract_html_text(path)
 
