@@ -6,6 +6,7 @@ import streamlit as st
 
 from token_estimator import (
     DEFAULT_CONTEXT_LIMIT,
+    MAX_REFERENCE_FILES,
     estimate_file,
     estimate_prompt,
     summarize,
@@ -56,13 +57,15 @@ files = st.file_uploader(
     accept_multiple_files=True,
 )
 
-st.caption(f"Reference files selected: {len(files)} / 20")
+st.caption(
+    f"Reference files selected: {len(files)} / {MAX_REFERENCE_FILES}"
+)
 
-if len(files) > 20:
+if len(files) > MAX_REFERENCE_FILES:
     st.error(
-        "Son Spectacles allows at most 20 reference files. "
+        f"Son Spectacles allows at most {MAX_REFERENCE_FILES} reference files. "
         "The estimator can still calculate the token total, but the task "
-        "itself should be reduced to 20 files or fewer."
+        f"itself should be reduced to {MAX_REFERENCE_FILES} files or fewer."
     )
 
 if st.button("Estimate context budget", type="primary"):
@@ -196,7 +199,7 @@ st.markdown(
 
 **Supported extraction:** PDF, DOCX, PPTX, XLSX, CSV, TXT, JSON, PY, MD, HTML, and XML. Image-only content is not OCR-scanned in this prototype.
 
-**Reference-file check:** Son Spectacles tasks allow 1–20 reference files. The prompt is counted separately.
+**Reference-file check:** Son Spectacles tasks allow 1–16 reference files. The prompt is counted separately.
 
 **Recommended bands:** Under 70% of the selected context limit is usually safer, 70–85% requires caution, 85–95% is risky, and above 95% is critical because hidden system and response overhead may also consume context.
 """
