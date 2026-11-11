@@ -1,6 +1,6 @@
 # Son Spectacles Context Budget Estimator
 
-A small local/Streamlit tool for estimating how much model context a **Son Spectacles** task may consume after the prompt and reference files are parsed.
+A small tool for estimating how much model context a **Son Spectacles** task may consume after the prompt and reference files are parsed.
 
 The key metric is **extracted text tokens**, not file size in MB. A small text-dense PDF or workbook can consume far more context than a larger image-heavy file.
 
