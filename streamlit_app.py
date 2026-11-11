@@ -51,7 +51,6 @@ files = st.file_uploader(
         "py",
         "md",
         "html",
-        "htm",
         "xml",
     ],
     accept_multiple_files=True,
