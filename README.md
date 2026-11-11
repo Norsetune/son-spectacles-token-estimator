@@ -6,7 +6,7 @@ The key metric is **extracted text tokens**, not file size in MB. A small text-d
 
 ## Son Spectacles reference-file rules
 
-The current project guidelines allow **1–20 reference files** using these file types:
+The current project guidelines allow **1–16 reference files** using these file types:
 
 - PDF (`.pdf`)
 - Word (`.docx`)
@@ -58,7 +58,7 @@ The app reports:
 - risk band
 - per-file token estimates
 - largest contributors
-- reference-file count against the Son Spectacles 20-file cap
+- reference-file count against the Son Spectacles 16-file cap
 - downloadable CSV report
 
 ## Run from the command line
