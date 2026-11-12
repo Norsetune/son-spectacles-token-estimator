@@ -36,7 +36,7 @@ SUPPORTED_EXTENSIONS = {
     ".xml",
 }
 
-DEFAULT_CONTEXT_LIMIT = 100_000
+DEFAULT_CONTEXT_LIMIT = 128_000
 MAX_REFERENCE_FILES = 16
 
 
@@ -827,7 +827,7 @@ def main() -> None:
         default=DEFAULT_CONTEXT_LIMIT,
         help=(
             "Context limit. "
-            "Default: 100,000 tokens."
+            "Default: 128,000 tokens."
         ),
     )
 
