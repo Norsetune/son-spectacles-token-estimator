@@ -24,9 +24,9 @@ The estimator supports the same set.
 
 ## Context limit
 
-The app defaults to **100,000 tokens**, matching the existing Spidey estimator, but the limit is editable.
+The app defaults to **128,000 tokens**, using the current lower-bound context limit for the Son Spectacles model set. The limit remains editable.
 
-This should be treated as a configurable planning value rather than an official Son Spectacles limit: the project guidelines define allowed files and file counts, but do not state a model context ceiling. If Ops provides a different limit for a runner/model, enter that value in the app.
+This should be treated as a configurable planning value rather than a fixed project rule. If a specific runner/model uses a different context limit, enter that value in the app.
 
 ## Install
 
